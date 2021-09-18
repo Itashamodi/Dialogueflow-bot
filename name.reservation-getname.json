@@ -1,0 +1,92 @@
+{
+  "id": "c89c0ef3-a3e2-4ace-b32a-242e25ed8ab0",
+  "parentId": "03e6a084-c966-4013-9a09-b4a051abbb7f",
+  "rootParentId": "03e6a084-c966-4013-9a09-b4a051abbb7f",
+  "name": "name.reservation-getname",
+  "auto": true,
+  "contexts": [
+    "namereservation-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "namereservation.namereservation-custom",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "fcd41445-f396-4677-a892-58c8a2cef04a",
+          "name": "given-name",
+          "required": false,
+          "dataType": "@sys.given-name",
+          "value": "$given-name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7b2f1532-3f12-421e-9513-cfc83b326f95",
+          "name": "reservationnumber",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$reservationnumber",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What is your reservation number?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a64020dc-7078-4b69-bcaf-99a5678a475c",
+          "name": "newname",
+          "required": true,
+          "dataType": "@sys.person",
+          "value": "$newname",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What is the new name for the reservation?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Thank you $given-name. I have changed the name on reservation number $reservationnumber to be $newname."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
